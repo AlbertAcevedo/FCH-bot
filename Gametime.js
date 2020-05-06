@@ -67,7 +67,7 @@ room.onPlayerChat = function (player, message) {
     case "kra/alternativa/red":
       room.setTeamColors(1, 90, 0x000000, [0xAB0E38]);
       break;
-    case "doj/alternativa/blue":
+    case "kra/alternativa/blue":
       room.setTeamColors(2, 90, 0x000000, [0xAB0E38]);
       break;
     // Lions
@@ -97,18 +97,20 @@ room.onPlayerChat = function (player, message) {
       room.setTeamColors(2, 90, 0x682970, [0xFFFFFF]);
       break;
     // Devils
-    case "lio/titular/red":
+    case "dev/titular/red":
       room.setTeamColors(1, 90, 0xFFFFFF, [0xFF0000, 0xFF0000, 0x000000]);
       break;
-    case "lio/titular/blue":
+    case "dev/titular/blue":
       room.setTeamColors(2, 90, 0xFFFFFF, [0xFF0000, 0xFF0000, 0x000000]);
       break;
-    case "lio/alternativa/red":
+    case "dev/alternativa/red":
       room.setTeamColors(1, 90, 0xFFCC26, [0x000000, 0x000000, 0xFFFFFF]);
       break;
-    case "lio/alternativa/blue":
+    case "dev/alternativa/blue":
       room.setTeamColors(2, 90, 0xFFCC26, [0x000000, 0x000000, 0xFFFFFF]);
       break;
+    case "!redcolor":
+      room.sendAnnouncement(Object.getOwnPropertyNames(room))
     default:
       break;
     // code block
