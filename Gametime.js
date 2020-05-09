@@ -275,7 +275,6 @@ function adminFun(player, message) { // !admin Andis
 
 function resignFun(player, message) {
     room.setPlayerAdmin(player.id, false);
-    updateAdmins();
 }
 function helpFun() { // !help
     room.sendAnnouncement("[💬] Comandos disponibles: | !confirm | !afk | !afks | !confirmed  | !stats Nickname  | !elohelp | !eloranking", null, 0x95d853, 'bold', 0);
@@ -1229,28 +1228,8 @@ room.onPlayerJoin = function (player) {
     room.sendAnnouncement("[📶] IBienvenid@! @" + playerName + ".", null, 0x95d853, 'bold', 0);
     room.sendAnnouncement("[📶] @" + playerName + " 🚨 Escribe !tabla para ir al tanto de la liga. 🚨", null, 0x95d853, 'bold', 0);
     room.sendAnnouncement("[📶] IP del jugador: " + player.conn, null, 0x8bb9dd, 'bold', 0);
-    var players = room.getPlayerList();
-    var adminNumber = 0;
-    for (var i = 0; i < players.length; i++) {
-        if (players[i].admin) {
-            adminNumber++;
-        }
-    }
-    if (adminNumber < 2) {
-        room.setPlayerAdmin(players[1].id, true);
-    }
 }
 room.onPlayerLeave = function (player) {
-    var players = room.getPlayerList();
-    var adminNumber = 0;
-    for (var i = 0; i < players.length; i++) {
-        if (players[i].admin) {
-            adminNumber++;
-        }
-    }
-    if (adminNumber < 2) {
-        room.setPlayerAdmin(players[1].id, true);
-    }
 }
 function isOutsideStadium(ballPosition) {
     return ballPosition.x > stadiumWidth || ballPosition.x < -stadiumWidth || ballPosition.y > stadiumHeight || ballPosition.y < -stadiumHeight;
