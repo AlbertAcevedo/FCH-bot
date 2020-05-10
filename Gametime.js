@@ -1166,35 +1166,6 @@ room.onTeamVictory = function (scores) { // Sum up all scorers since the beginni
     if (account1 !== undefined && scores.red == 0 && gk[1].position != null && hasFinished == false) {
         stats[account1.username][5] += 1;
     } else { };
-    if (scores.red > scores.blue) {
-        players = room.getPlayerList()
-        eloDelta = updateElo(redTeam, blueTeam, 1, 0);
-        updateWinLoseStats(redTeam, blueTeam);
-        updateWinLoseStreakStats(redTeam, blueTeam);
-        for (i = players.length - 1; i > 0; i--) {
-            if (players[i].team == 2) {
-                room.setPlayerTeam(players[i].id, 0);
-            }
-        }
-    }
-    else {
-        players = room.getPlayerList()
-        eloDelta = updateElo(redTeam, blueTeam, 0, 1);
-        updateWinLoseStats(blueTeam, redTeam);
-        updateWinLoseStreakStats(blueTeam, redTeam);
-        for (i = players.length - 1; i > 0; i--) {
-            if (players[i].team == 1) {
-                room.setPlayerTeam(players[i].id, 0);
-            }
-        }
-    }
-    room.sendAnnouncement("Goles marcados. ⚽:", null, 0xfdfd96, "normal", 0)
-    for (var [key, value] of scorers) { // key: name of the player, value: time of the goal
-        room.sendAnnouncement(key + " " + value[1] + value[2] + ": " + value[0], null, 0xfdfd96, "normal", 0);
-    }
-    teamPossFun();
-    room.stopGame();
-    saveStatsFun();
 }
 room.onGameStop = function () {
     scorers = undefined;
