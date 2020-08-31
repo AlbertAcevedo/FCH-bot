@@ -1,10 +1,8 @@
 /* ROOM */
-var ghostball = '{"name":"3ball Medium","width":510,"height":235,"bg":{"type":"grass","width":460,"height":205,"kickOffRadius":80},"vertexes":[{"x":-460,"y":205,"cMask":["ball"]},{"x":-460,"y":80,"cMask":["ball"]},{"x":-460,"y":-80,"cMask":["ball"]},{"x":-460,"y":-205,"cMask":["ball"]},{"x":460,"y":205,"cMask":["ball"]},{"x":460,"y":80,"cMask":["ball"]},{"x":460,"y":-80,"cMask":["ball"]},{"x":460,"y":-205,"cMask":["ball"]},{"x":0,"y":235,"bCoef":0.1,"cMask":["red","blue"],"cGroup":["redKO","blueKO"]},{"x":0,"y":80,"bCoef":0.1,"cMask":["red","blue"],"cGroup":["redKO","blueKO"]},{"x":0,"y":-80,"bCoef":0.1,"cMask":["red","blue"],"cGroup":["redKO","blueKO"]},{"x":0,"y":-235,"bCoef":0.1,"cMask":["red","blue"],"cGroup":["redKO","blueKO"]},{"x":-470,"y":-80,"bCoef":0.1,"cMask":["ball"]},{"x":-490,"y":-60,"bCoef":0.1,"cMask":["ball"]},{"x":-490,"y":60,"bCoef":0.1,"cMask":["ball"]},{"x":-470,"y":80,"bCoef":0.1,"cMask":["ball"]},{"x":470,"y":-80,"bCoef":0.1,"cMask":["ball"]},{"x":490,"y":-60,"bCoef":0.1,"cMask":["ball"]},{"x":490,"y":60,"bCoef":0.1,"cMask":["ball"]},{"x":470,"y":80,"bCoef":0.1,"cMask":["ball"]}],"segments":[{"v0":0,"v1":1,"vis":false,"cMask":["ball"]},{"v0":2,"v1":3,"vis":false,"cMask":["ball"]},{"v0":4,"v1":5,"vis":false,"cMask":["ball"]},{"v0":6,"v1":7,"vis":false,"cMask":["ball"]},{"v0":13,"v1":12,"bCoef":0.1,"curve":89.99999999999999,"curveF":1.0000000000000002,"cMask":["ball"]},{"v0":13,"v1":14,"bCoef":0.1,"cMask":["ball"]},{"v0":15,"v1":14,"bCoef":0.1,"curve":89.99999999999999,"curveF":1.0000000000000002,"cMask":["ball"]},{"v0":16,"v1":17,"bCoef":0.1,"curve":89.99999999999999,"curveF":1.0000000000000002,"cMask":["ball"]},{"v0":17,"v1":18,"bCoef":0.1,"cMask":["ball"]},{"v0":18,"v1":19,"bCoef":0.1,"curve":89.99999999999999,"curveF":1.0000000000000002,"cMask":["ball"]},{"v0":8,"v1":9,"bCoef":0.1,"vis":false,"cMask":["red","blue"],"cGroup":["redKO","blueKO"]},{"v0":9,"v1":10,"bCoef":0.1,"curve":180,"curveF":6.123233995736766e-17,"vis":false,"cMask":["red","blue"],"cGroup":["blueKO"]},{"v0":10,"v1":9,"bCoef":0.1,"curve":180,"curveF":6.123233995736766e-17,"vis":false,"cMask":["red","blue"],"cGroup":["redKO"]},{"v0":10,"v1":11,"bCoef":0.1,"vis":false,"cMask":["red","blue"],"cGroup":["redKO","blueKO"]}],"planes":[{"normal":[0,1],"dist":-205,"cMask":["ball"]},{"normal":[0,-1],"dist":-205,"cMask":["ball"]},{"normal":[0,1],"dist":-235,"bCoef":0.1},{"normal":[0,-1],"dist":-235,"bCoef":0.1},{"normal":[1,0],"dist":-510,"bCoef":0.1},{"normal":[-1,0],"dist":-510,"bCoef":0.1}],"goals":[{"p0":[-460,80],"p1":[-460,-80],"team":"red"},{"p0":[460,80],"p1":[460,-80],"team":"blue"}],"discs":[{"cGroup":["ball","kick","score"]},{"pos":[-460,80],"radius":8,"invMass":0,"color":"FFCCCC"},{"pos":[-460,-80],"radius":8,"invMass":0,"color":"FFCCCC"},{"pos":[460,80],"radius":8,"invMass":0,"color":"CCCCFF"},{"pos":[460,-80],"radius":8,"invMass":0,"color":"CCCCFF"},{"pos":[0,-10],"cGroup":["ball","kick","score"]},{"pos":[0,10],"cGroup":["ball","kick","score"]}],"playerPhysics":{},"ballPhysics":"disc0","cameraFollow":"player","spawnDistance":260,"kickOffReset":"full"}';
-
-var roomName = "HaxCOL Official ROOM";
+var roomName = "Minnesota Gophers DOMO";
 var maxPlayers = 16;
 var roomPublic = false;
-var playerName = "HaxCOL BOT";
+var playerName = "GopherBOT";
 var stadiumWidth = 1150;
 var stadiumHeight = 600;
 var radiusBall = 10;
@@ -802,44 +800,6 @@ var gk = [init, init];
 var goalScored = false;
 let accounts = [];
 
-// IPS SUPERADMINS
-const IpSuperAdmin = ["3138362E3136382E3132362E313337"]; //RX
-
-//CUENTAS//
-accounts.push({ username: "RX.", password: "lucresi" });
-accounts.push({ username: "Panda", password: "hax321+" });
-accounts.push({ username: "DeBruyne", password: "y3Pw78" });
-accounts.push({ username: "wonej0 ", password: "OA2020" });
-accounts.push({ username: "Maux", password: "8NCLE" });
-accounts.push({ username: "Spy", password: "r9EjWz" });
-accounts.push({ username: "DIEGO", password: "obesos123" });
-accounts.push({ username: "Cheema", password: "jJYW6e" });
-accounts.push({ username: "Sagg", password: "Rr8b5P" });
-accounts.push({ username: "BryanCisf", password: "brayan123" });
-accounts.push({ username: "Warrior", password: "ELLEGENDARIOWARRIOR" });
-accounts.push({ username: "Zed", password: "jphc240205" });
-accounts.push({ username: ";-;", password: "soydownewe" });
-accounts.push({ username: "Real", password: "G3SudG" });
-accounts.push({ username: "caslu", password: "gkEB62" });
-accounts.push({ username: "Cali", password: "calculadora" });
-accounts.push({ username: "Teastro", password: "2ZdAbY" });
-accounts.push({ username: "ElSirkael", password: "9nAhWV" });
-accounts.push({ username: "Dorlan", password: "4DY9rT" });
-accounts.push({ username: "Radi", password: "blackñero" });
-accounts.push({ username: "Caralhooo", password: "4H9fmQ" });
-accounts.push({ username: "Paula", password: "T8chdY" });
-accounts.push({ username: "wz", password: "mrp2q8" });
-accounts.push({ username: "lorenzi", password: "ysQ9bF" });
-accounts.push({ username: "Zarco", password: "mA2CzV" });
-accounts.push({ username: "Arjen", password: "7Ev6WE" });
-accounts.push({ username: "ABECE", password: "s9eQBe" });
-accounts.push({ username: "Ginomasterxd", password: "F9eH53" });
-accounts.push({ username: "benitoca", password: "vR6z3V" });
-accounts.push({ username: "Nasz", password: "NkL8QA" });
-accounts.push({ username: "Dida", password: "3Knwxk" });
-accounts.push({ username: "webo", password: "v22081850" });
-
-
 
 
 var commands = {
@@ -871,7 +831,7 @@ var commands = {
     "!10": NumeroDiezFun,
     // Command that need to know who is the player.
     "!gk": gkFun,
-    "!adminh4xc0l": adminFun,
+    "!adming0ph3r": adminFun,
     // Command that need to know if a player is admin
     "!swap": swapFun,
     "!rr": resetFun,
