@@ -1,8 +1,8 @@
 /* ROOM */
-var roomName = "Minnesota Gophers DOMO";
-var maxPlayers = 16;
-var roomPublic = false;
-var playerName = "GopherBOT";
+var roomName = "HaxCOL VPS";
+var maxPlayers = 20;
+var roomPublic = true;
+var playerName = "Miami BOT";
 var stadiumWidth = 1150;
 var stadiumHeight = 600;
 var radiusBall = 10;
