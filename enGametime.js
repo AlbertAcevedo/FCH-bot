@@ -275,24 +275,24 @@ function resignFun(player, message) {
     room.setPlayerAdmin(player.id, false);
 }
 function helpFun() { // !help
-    room.sendAnnouncement("[💬] Comandos disponibles: | !confirm | !afk | !afks | !confirmed  | !stats Nickname  | !elohelp | !eloranking", null, 0x95d853, 'bold', 0);
+    room.sendAnnouncement("[💬] Available commands: | !confirm | !afk | !afks | !confirmed  | !stats Nickname  | !elohelp | !eloranking", null, 0x95d853, 'bold', 0);
     room.sendAnnouncement("| !ranking | !questionsmap | !poss | !adminhelp | !gkhelp | !rankhelp | !bb | !maps | !confirmar", null, 0x95d853, 'bold', 0);
     room.sendAnnouncement("| !pelota | !customball (Color Hexadecimal) | !ball (color en inglés) | !1-9 | !goles | !asistencias | !discord |", null, 0x95d853, 'bold', 0);
 }
 function mapsFun() { // !maps
-    room.sendAnnouncement("[💬] 𝐒𝐎́𝐋𝐎 𝐏𝐀𝐑𝐀 𝐀𝐃𝐌𝐈𝐍: Elige entre los siguientes mapas: | !medium,  !rs, !pensblue, !pensred y !minirs | !juegos", null, 0xfdfd96, 'bold', 0);
+    room.sendAnnouncement("[💬] 𝐀𝐃𝐌𝐈𝐍: Choose between following maps: | !medium,  !rs, !pensblue, !pensred y !minirs | !juegos", null, 0xfdfd96, 'bold', 0);
 }
 function adminHelpFun() {
-    room.sendAnnouncement("💬  Comandos disponibles: '!mute Player', '!unmute Player', '!clearbans', '!rr', '!kickafks', '!resign', '!swap' (Para cambiar de lado)", null, 0xD4D400, 'bold', 0);
+    room.sendAnnouncement("💬  avaible commands: '!mute Player', '!unmute Player', '!clearbans', '!rr', '!kickafks', '!resign', '!swap' ", null, 0xD4D400, 'bold', 0);
 }
 function gkHelpFun() { // !gkhelp
-    room.sendAnnouncement('💬  El jugador que se encuentre más atrás será seleccionado como el arquero. Escribe !gk si el bot se equivoca. (NO VÁLIDO PARA ESPECTADORES).', null, 0xfdfd96, "normal", 0)
+    room.sendAnnouncement('💬  Closest player to goal is picked as GK . write !gk if you wish to become GK.', null, 0xfdfd96, "normal", 0)
 }
 function rankHelpFun() { // !gkhelp
-    room.sendAnnouncement("💬  Ten puntos en el host! Gol: 2 pts, Assistencia: 1 pts, Victoria: 3 pts, Vaya invicta: 3 pts, Derrota: -3 pts, Goal en contra: -2 pts..", null, 0xfdfd96, "normal", 0)
+    room.sendAnnouncement("💬  Play and get points!!!", null, 0xfdfd96, "normal", 0)
 }
 function eloHelpFun() {
-    room.sendAnnouncement("💬 ¡Consigue puntos por ganar partidos! Los puntos se calculan utilizando el sistema ELO.", null, 0xfdfd96, "normal", 0)
+    room.sendAnnouncement("💬 Get points by winning games!", null, 0xfdfd96, "normal", 0)
 }
 //STATS//
 function statsFun(player, message) {
@@ -313,7 +313,7 @@ function resetStatsAdminFun(player, message) { // !resetpakhome
     return false;
 }
 function clearbansFun(player) { // !clear
-    if (player.admin == true) { room.clearBans(); room.sendAnnouncement("💎 Los bans se han borrado.", null, 0xfdfd96, "normal", 0); }
+    if (player.admin == true) { room.clearBans(); room.sendAnnouncement("💎 Bans have been cleared.", null, 0xfdfd96, "normal", 0); }
 }
 function resetFun(player) {
     if (player.admin == true) {
@@ -324,11 +324,11 @@ function resetFun(player) {
     if (room.getScores() != null && room.getScores().time < 60) {
         if (player.team == 1) {
             gk[0] = player;
-            room.sendAnnouncement("El nuevo arquero de 𝐑𝐄𝐃 🔴 es: " + gk[0].name)
+            room.sendAnnouncement(" 𝐑𝐄𝐃 🔴 GK: " + gk[0].name)
         }
         else if (player.team == 2) {
             gk[1] = player;
-            room.sendAnnouncement("El nuevo arquero de 𝐁𝐋𝐔𝐄 🔵 es:" + gk[1].name)
+            room.sendAnnouncement(" 𝐁𝐋𝐔𝐄 🔵 GK:" + gk[1].name)
         }
     }
     return;
@@ -339,7 +339,7 @@ function closeFun(player) {
     }
 }
 function leaveFun(player) {
-    room.kickPlayer(player.id, "Chai bb, te cuidas.", false);
+    room.kickPlayer(player.id, "Peace.", false);
 }
 /*
 For ranking
@@ -376,7 +376,7 @@ function ranking() {
         let message = tmp.map(e => `${pos++}) ${e.name}: ${e.value}`).join("   ┃");
         room.sendAnnouncement(message, null, 0xfdfd96, "normal", 0);
     }
-    room.sendAnnouncement("Para que puedas guardar tus datos, confírmate ┃ !confirmar ┃", null, 0xcb99c9, "bold", 0);
+    room.sendAnnouncement("To save your stats please confirm ┃ !confirm ┃", null, 0xcb99c9, "bold", 0);
 }
 
 function GoleadoresCalc(player) {
@@ -476,7 +476,7 @@ function eloranking() {
         let message = tmp.map(e => `${pos++}) ${e.name}: ${e.value}`).join("   ┃");
         room.sendAnnouncement(message, null, 0xfdfd96, "normal", 0);
     }
-    room.sendAnnouncement("Para que tenga valor los puntos ELO, confírmate ┃ !confirmar ┃", null, 0xcb99c9, "bold", 0);
+    room.sendAnnouncement("To save your stats please confirm. ┃ !confirm ┃", null, 0xcb99c9, "bold", 0);
 }
 
 function sendStats(name) {
@@ -486,7 +486,7 @@ function sendStats(name) {
     if (ps[9] == parseInt(0)) {ps[9] = "L"} else {ps[9] = "W"}
     if (ps[10] == parseInt(0)) {ps[10] = "L"} else {ps[10] = "W"}
     if (ps[11] == parseInt(0)) {ps[11] = "L"} else {ps[11] = "W"} */
-    room.sendAnnouncement(name + ":  Goles: " + ps[0] + " |  Assistencias: " + ps[1]
+    room.sendAnnouncement(name + ":  GOALS: " + ps[0] + " |  ASSISTS: " + ps[1]
         + " |  Goles en contra: " + ps[4] + " |  Arcos en 0: " + ps[5] + " |  Victorias: " + ps[2] + " |  Derrotas: " + ps[3] + " | 💎 ELO: " + ps[6], null, 0xa3fcff, "normal", 0);
     if (ps[7] !== "D" && ps[8] !== "D" && ps[9] !== "D" && ps[10] !== "D" && ps[11] !== "D") { room.sendAnnouncement(name + ": 🥇 últimos 5 W/L: " + ps[7] + " - " + ps[8] + " - " + ps[9] + " - " + ps[10] + " - " + ps[11], null, 0xa3fcff, "normal", 0); }
     if (ps[7] !== "D" && ps[8] !== "D" && ps[9] !== "D" && ps[10] !== "D" && ps[11] == "D") { room.sendAnnouncement(name + ": 🥇 últimos 4 W/L: " + ps[7] + " - " + ps[8] + " - " + ps[9] + " - " + ps[10] + " - " + ps[11], null, 0xa3fcff, "normal", 0); }
@@ -505,17 +505,17 @@ function whichTeam() { // gives the players in the red or blue team
 function afkFun(player, message) { // !afk
     if (afkPlayerIDs.has(player.id)) {
         afkPlayerIDs.delete(player.id);
-        room.sendAnnouncement("💎 " + player.name + " : No está más AFK.", null, 0xa3fcff, "normal", 0);
-    } else { afkPlayerIDs.add(player.id); room.setPlayerTeam(player.id, 0); room.sendAnnouncement("💎 " + player.name + " : 😴Está AFK!", null, 0xa3fcff, "normal", 0); }
+        room.sendAnnouncement("💎 " + player.name + " : is no longer AFK.", null, 0xa3fcff, "normal", 0);
+    } else { afkPlayerIDs.add(player.id); room.setPlayerTeam(player.id, 0); room.sendAnnouncement("💎 " + player.name + " : 😴is AFK!", null, 0xa3fcff, "normal", 0); }
 }
 function afksFun(player, message) { // !huge
     afkPlayers_list = room.getPlayerList().filter((x) => afkPlayerIDs.has(x.id));
     afkPlayers_list_string = afkPlayers_list.map(x => x.name).join("   ┃");
     if (afkPlayers_list == "") {
-        room.sendAnnouncement("💎 NO HAY AFKs.", null, 0xfdfd96, "normal", 0);
+        room.sendAnnouncement("💎 NO AFKs.", null, 0xfdfd96, "normal", 0);
     }
     else {
-        room.sendAnnouncement("😴 Están AFKs:  " + afkPlayers_list_string, null, 0xa3fcff, "normal", 0);
+        room.sendAnnouncement("😴 AFKs:  " + afkPlayers_list_string, null, 0xa3fcff, "normal", 0);
     }
 }
 function kickafksFun(player, message) { // !huge
@@ -563,21 +563,21 @@ function confirmedPlayersFun(player, message) { // !huge
     confirmedPlayers_list = room.getPlayerList().filter((x) => confirmedPlayers.has(x.id));
     confirmedPlayers_list_string = confirmedPlayers_list.map(x => x.name).join(" ┃ ");
     if (confirmedPlayers_list == "") {
-        room.sendAnnouncement("💎 No hay jugadores!", null, 0xa3fcff, "normal", 0);
+        room.sendAnnouncement("💎 No players confirmed.", null, 0xa3fcff, "normal", 0);
     }
     else {
-        room.sendAnnouncement("💎 Jugadores registrados: " + confirmedPlayers_list_string, null, 0xa3fcff, "normal", 0);
+        room.sendAnnouncement("💎 Registered players: " + confirmedPlayers_list_string, null, 0xa3fcff, "normal", 0);
     }
 }
 function eightballFun(player, message) {
-    var myArray = ['Radi es la negra del grupo.', 'DIEGO la más obesa.', 'Lucho es una lok.', '!mute DIEGO', '!mute ₀₁ warrior'];
+    var myArray = [''];
     var rand = myArray[(Math.random() * myArray.length) | 0];
     var myArray2 = ['😀', '😁', '😂', '😃', '😄', '😅', '😆', '😉', '😊', '😋', '😎', '😍', '😘', '😏', '😣', '😥', '😮', '😯', '😪', '😫', '😴', '😌', '😛', '😜', '😝'];
     var randimage = myArray2[(Math.random() * myArray2.length) | 0];
     room.sendChat(rand);
 }
 function InsultosFun(player, message) {
-    var myArray = ['Fight of invalids', ' Esto se va a poner feo. ', ' PELEA! PELEA! ', ' Ayyy cómo le dice ', ' turn down for what ', ' OHHHHHH ', 'Se va a dejar?'];
+    var myArray = ['retard', ' bitch ', 'LMAO', , 'asshat', ' OHHHHHH '];
     var rand = myArray[(Math.random() * myArray.length) | 0];
     var myArray2 = ['😀', '😁', '😂', '😃', '😄', '😅', '😆', '😉', '😊', '😋', '😎', '😍', '😘', '😏', '😣', '😥', '😮', '😯', '😪', '😫', '😴', '😌', '😛', '😜', '😝'];
     var randimage = myArray2[(Math.random() * myArray2.length) | 0];
@@ -715,10 +715,10 @@ function teamPossFun() {
     ballCarrying.forEach(updateTeamPoss);
     var redPossPercent = Math.round((redPoss / (redPoss + bluePoss + 0.000001)) * 100);
     var bluePossPercent = Math.round((bluePoss / (redPoss + bluePoss + 0.000001)) * 100);
-    room.sendAnnouncement("⛹ Posesión del balón:  Tᴇᴀᴍ Rᴇᴅ 🔴 " + boldedNumber(redPossPercent) + "% - " + boldedNumber(bluePossPercent) + "% Tᴇᴀᴍ Bʟᴜᴇ 🔵 ", null, 0xfdfd96, "normal", 0);
+    room.sendAnnouncement("⛹ Possesion:  Tᴇᴀᴍ Rᴇᴅ 🔴 " + boldedNumber(redPossPercent) + "% - " + boldedNumber(bluePossPercent) + "% Tᴇᴀᴍ Bʟᴜᴇ 🔵 ", null, 0xfdfd96, "normal", 0);
     var timeOnRedHalf = Math.round((timeOnHalves[0] / (timeOnHalves[0] + timeOnHalves[1] + 0.000001)) * 100);
     var timeOnBlueHalf = Math.round((timeOnHalves[1] / (timeOnHalves[0] + timeOnHalves[1] + 0.000001)) * 100);
-    room.sendAnnouncement("◧ Posesión en el campo: Tᴇᴀᴍ Rᴇᴅ 🔴 " + boldedNumber(timeOnRedHalf) + "% - " + boldedNumber(timeOnBlueHalf) + "% Tᴇᴀᴍ Bʟᴜᴇ 🔵 ", null, 0xfdfd96, "normal", 0);
+    room.sendAnnouncement("◧ Posession: Tᴇᴀᴍ Rᴇᴅ 🔴 " + boldedNumber(timeOnRedHalf) + "% - " + boldedNumber(timeOnBlueHalf) + "% Tᴇᴀᴍ Bʟᴜᴇ 🔵 ", null, 0xfdfd96, "normal", 0);
 }
 /*
 For the game
@@ -831,7 +831,7 @@ var commands = {
     "!10": NumeroDiezFun,
     // Command that need to know who is the player.
     "!gk": gkFun,
-    "!adming0ph3r": adminFun,
+    "!amdinp4nd3r": adminFun,
     // Command that need to know if a player is admin
     "!swap": swapFun,
     "!rr": resetFun,
@@ -892,18 +892,16 @@ room.onPlayerChat = function (player, message) {
         adminMessage = message;
         message = message.split(/ +/);
         var adminChatColor = 0xF0E226; // Formato: 0xCOLOR (sustituye COLOR por el color en HEXADECIMAL, ejemplo azul es 33FFE0)
-        room.sendAnnouncement(`ANUNCIO DE ${player.name}: ${adminMessage}`, null, adminChatColor, 'bold', 1);
+        room.sendAnnouncement(`ANNOUNCEMENT BY ${player.name}: ${adminMessage}`, null, adminChatColor, 'bold', 1);
         return false;
-    }else if (message == "!tabla") {
-            room.sendAnnouncement(" https://tinyurl.com/potts-host ", null, 0xcb99c9, 'bold', 0);
     }
 
     //BAN SPAMMERS//
     if (message.includes("ఌ") || message.includes("甈") || message.includes("㐷") || message.includes("怅") || message.includes("瘪") || message.includes("⑸") || message.includes("㬆") || message.includes("権") || message.includes("怜") || message.includes("∯") || message.includes("㤒") || message.includes("䉊") || message.includes("匊") || message.includes("ᙻ") || message.includes("ൽ") || message.includes("爂") || message.includes("爇") || message.includes("त") || message.includes("権") || message.includes("怜") || message.includes("∯") || message.includes("㤒") || message.includes("BOT HPTA") || message.includes("眮") || message.includes("㤮") || message.includes("㵧") || message.includes("間") || message.includes("謝") || message.includes("奶") || message.includes("如") || message.includes("失") || message.includes("好") || message.includes("莖") || message.includes("治") || message.includes("帶") || message.includes("陰") || message.includes("KKKKKKKKKKK") || message.includes("kkkkkkk")) {
-        room.kickPlayer(player.id, "BOOOOM💥 NO SPAM NEGGE.", true);
+        room.kickPlayer(player.id, "💥 NO SPAM", true);
         return false; // The message won't be displayed
-    } if (message.includes("bot hpta")) {
-        room.kickPlayer(player.id, "Su mamita.", false);
+    } if (message.includes("stupid bot")) {
+        room.kickPlayer(player.id, "ur mom", false);
         return false; // The message won't be displayed
     }
     //camisetas
