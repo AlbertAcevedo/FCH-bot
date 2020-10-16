@@ -1,8 +1,8 @@
 /* ROOM */
-var roomName = "Minnesota Gophers DOMO";
+var roomName = "King Panda's DOMO";
 var maxPlayers = 16;
-var roomPublic = false;
-var playerName = "GopherBOT";
+var roomPublic = true;
+var playerName = "PandaBOT";
 var stadiumWidth = 1150;
 var stadiumHeight = 600;
 var radiusBall = 10;
@@ -40,8 +40,7 @@ var lineCrossedPlayers = [{ name: "temp", times: 0 }];
 var isBallKickedOutside = false;
 var previousPlayerTouched;
 var timeOutside = 0;
-geo = { "code": "co", "lat": 4.5, "lon": -74.2 };
-var room = HBInit({ roomName: roomName, maxPlayers: maxPlayers, public: roomPublic, playerName: playerName, token: "thr1.AAAAAFyRjgZMy18R2w9YjQ.-FYMqQV18YE", geo });
+var room = HBInit({ roomName: roomName, maxPlayers: maxPlayers, public: roomPublic, playerName: playerName, token: "thr1.AAAAAFyRjgZMy18R2w9YjQ.-FYMqQV18YE" });
 
 room.setDefaultStadium("Big");
 room.setScoreLimit(0);
