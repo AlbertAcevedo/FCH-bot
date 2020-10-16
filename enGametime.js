@@ -1154,6 +1154,7 @@ room.onPlayerJoin = function (player) {
     clonekick(player);
     playerName = player.name.replace(/ /g, "_");
     room.sendAnnouncement("[📶] Welcome to Gophers DOMO" + playerName + ".", null, 0x95d853, 'bold', 0);
+    updateAdmins();
 }
 room.onPlayerLeave = function (player) {
 }
