@@ -254,7 +254,6 @@
 				blueColors = tempColors
 				room.setTeamColors(1, redAngle, redColors[0], [redColors[1], redColors[2], redColors[3]]);
 				room.setTeamColors(2, blueAngle, blueColors[0], [blueColors[1], blueColors[2], blueColors[3]]);
-				room.sendAnnouncement(room., player.id, 0xc23b22, "normal", 0
 			}
 		}
 	}
