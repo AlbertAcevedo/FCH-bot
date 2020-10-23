@@ -1987,12 +1987,12 @@
 	}
 	room.onPlayerJoin = function (player) {
 		let conn = connections.find(a => a[1] === player.conn);
-				if (conn) {
-				 room.kickPlayer(player.id,"𝚂𝙾́𝙻𝙾 𝚄𝙽 𝙹𝚄𝙶𝙰𝙳𝙾𝚁 𝙿𝙾𝚁 𝙸𝙿 ❌",true);
-				}
-				else {
-				connections.push([player.id, player.conn]);
-				}
+		if (conn) {
+			room.kickPlayer(player.id, "𝚂𝙾́𝙻𝙾 𝚄𝙽 𝙹𝚄𝙶𝙰𝙳𝙾𝚁 𝙿𝙾𝚁 𝙸𝙿 ❌", false);
+		}
+		else {
+			connections.push([player.id, player.conn]);
+		}
 		clonekick(player);
 		playerName = player.name.replace(/ /g, "_");
 		room.sendAnnouncement("[📶] IBienvenid@! @" + playerName + " Para ver los comandos escribe: !help, !adminhelp, !rankhelp", null, 0x95d853, 'bold', 0);
