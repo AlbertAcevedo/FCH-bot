@@ -882,9 +882,14 @@
 
 	// IPS SUPERADMINS
 	const IpSuperAdmin = ["3138362E3136382E3132362E313337"]; //RX
-
 	//CUENTAS//
-		accounts.push({username: "DIEGO",password: "obesos123"});
+	accounts.push({username: "RX.",password: "lucresi"});
+	accounts.push({username: "Panda",password: "hax321+"});
+	accounts.push({username: "DeBruyne",password: "rxlabebémáslinda123"});
+	accounts.push({username: "wonej0 ",password: "OA2020"});
+	accounts.push({username: "Maux",password: "8NCLE"});
+	accounts.push({username: "Spy",password: "34332"});
+	accounts.push({username: "DIEGO",password: "obesos123"});
 	accounts.push({username: "Cheema",password: "jJYW6e"});
 	accounts.push({username: "Sagg",password: "Rr8b5P"});
 	accounts.push({username: "BryanCisf",password: "brayan123"});
@@ -974,17 +979,17 @@
 	accounts.push({username: "Hax",password: "dKMgE"});
 	accounts.push({username: "Juan Mata",password: "iVPfj"});
 	accounts.push({username: "AdamaT",password: "6Rghf"});
-        accounts.push({username: "LucasPaquetá",password: "63FF04"});
-        accounts.push({username: "9ine",password: "D32C35"});
-        accounts.push({username: "Bennett",password: "10E269"});
-        accounts.push({username: "itam",password: "2A1C5A"});
-        accounts.push({username: "juank87",password: "995B15"});
-        accounts.push({username: "Coxzito",password: "9BEC7D"});
-        accounts.push({username: "bastimelo",password: "F5BD13"});
-        accounts.push({username: "xCharles",password: "E72261"});
-        accounts.push({username: "bonecollector",password: "B5CFBA"});
-        accounts.push({username: "bronnyjames",password: "918652"});
-        accounts.push({username: "Ale",password: "CC2B2B"});				
+	accounts.push({username: "LucasPaquetá",password: "63FF04"});
+	accounts.push({username: "9ine",password: "D32C35"});
+	accounts.push({username: "Bennett",password: "10E269"});
+	accounts.push({username: "itam",password: "2A1C5A"});
+	accounts.push({username: "juank87",password: "995B15"});
+	accounts.push({username: "Coxzito",password: "9BEC7D"});
+	accounts.push({username: "bastimelo",password: "F5BD13"});
+	accounts.push({username: "xCharles",password: "E72261"});
+	accounts.push({username: "bonecollector",password: "B5CFBA"});
+	accounts.push({username: "bronnyjames",password: "918652"});
+	accounts.push({username: "Ale",password: "CC2B2B"});
 
 	var commands = {
 		// Command that doesnt need to know players attributes.
