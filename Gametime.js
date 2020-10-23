@@ -993,9 +993,6 @@
 
 	var commands = {
 		// Command that doesnt need to know players attributes.
-		"!help": helpFun,
-		"!ball": bosshaftColorString,
-		"!pelota": PelotaFun,
 		"!customball": bosshaftColor,
 		"!maps": mapsFun,
 		"!gkhelp": gkHelpFun,
@@ -1141,11 +1138,6 @@
 			room.setCustomStadium(deathball);
 		} else if (message == "!colracing" && player.admin) {
 			room.setCustomStadium(collisionracing);
-		}
-		else if (message == "!help") {
-			room.sendAnnouncement("[💬] 𝐒𝐎́𝐋𝐎 𝐏𝐀𝐑𝐀 𝐀𝐃𝐌𝐈𝐍: Elige entre los siguientes mapas: | !medium,  !rs, !pensblue, !pensred y !minirs | !juegos", null, 0xfdfd96, 'bold', 0);
-			room.sendAnnouncement("[💬] ❗𝐜𝐥𝐞𝐚𝐫𝐛𝐚𝐧𝐬 𝘱𝘢𝘳𝘢 𝘥𝘦𝘴𝘩𝘢𝘤𝘦𝘳 𝘭𝘰𝘴 𝘣𝘢𝘯𝘴 𝘳𝘦𝘢𝘭𝘪𝘻𝘢𝘥𝘰𝘴.", null, 0x95d853, 'bold', 0);
-			room.sendAnnouncement("[💬] ❗𝐜𝐚𝐦𝐢𝐬𝐞𝐭𝐚𝐬 𝘱𝘢𝘳𝘢 𝘴𝘦𝘭𝘦𝘤𝘤𝘪𝘰𝘯𝘢𝘳 𝘤𝘢𝘮𝘪𝘴𝘦𝘵𝘢𝘴 𝘥𝘦 𝘦𝘲𝘶𝘪𝘱𝘰𝘴.", null, 0x95d853, 'bold', 0);
 		} else if (message == "!mapas") {
 			room.sendAnnouncement("[💬] 𝐒𝐎́𝐋𝐎 𝐏𝐀𝐑𝐀 𝐀𝐃𝐌𝐈𝐍: Elige entre los siguientes mapas: | !medium,  !rs, !pensblue, !pensred y !minirs | !juegos", null, 0xfdfd96, 'bold', 0);
 		} else if (message == "!juegos") {
