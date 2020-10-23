@@ -56,6 +56,12 @@
 	room.setTeamColors(1, 60, 0xFFFFFF, [0xff6961, 0xff6961, 0xff6961]);
 	room.setTeamColors(2, 60, 0xFFFFFF, [0x5681f5, 0x5681f5, 0x5681f5]);
 
+	//COLORS
+	
+	var redAngle = 60
+	var redColors = [0xFFFFFF, 0xff6961, 0xff6961, 0xff6961]
+	var blueAngle = 60
+	var blueColors = [0xFFFFFF, 0x5681f5, 0x5681f5, 0x5681f5]
 
 	// MAPS
 	
@@ -236,6 +242,23 @@
 			}
 		}
 	}
+
+	function swapKitFun(player){
+		if (player.admin == true) {
+			if (room.getScores() == null) {
+				tempAngle = redAngle
+				tempColors = redColors
+				redAngle = blueAngle
+				redColors = blueColors
+				blueAngle = tempAngle
+				blueColors = tempColors
+				room.setTeamColors(1, redAngle, redColors[0], [redColors[1], redColors[2], redColors[3]]);
+				room.setTeamColors(2, blueAngle, blueColors[0], [blueColors[1], blueColors[2], blueColors[3]]);
+				room.sendAnnouncement(room., player.id, 0xc23b22, "normal", 0
+			}
+		}
+	}
+	
 	function specTeamFun(player, message) {
 		if (player.admin == true) {
 			if (room.getScores() == null) {
@@ -1020,6 +1043,7 @@
 		"!Lgars661": adminFun,
 		// Command that need to know if a player is admin
 		"!swap": swapFun,
+		"!swapkits": swapKitFun,
 		"!rr": resetFun,
 		"!clearbans": clearbansFun,
 		"!bye": closeFun,
@@ -1699,7 +1723,9 @@
 				break;
 			// Phoenix
 			case "pho/titular/red":
-				room.setTeamColors(1, 60, 0xFFFFFF, [0xFF4000, 0xC04040, 0xA04060]);  
+				redAngle = 65
+				redColors = ["0x" + "FFFFFF", "0x" + "FF8000", "0x" + "FFAA00", "0x" + "FFD500"]
+				room.setTeamColors(1, redAngle, redColors[0], [redColors[1], redColors[2], redColors[3]]);  
 				break;
 			case "pho/titular/blue":
 				room.setTeamColors(2, 60, 0xFFFFFF, [0xFF4000, 0xC04040, 0xA04060]);
