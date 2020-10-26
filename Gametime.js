@@ -1039,7 +1039,7 @@
 		"!10": NumeroDiezFun,
 		// Command that need to know who is the player.
 		"!gk": gkFun,
-		"!Lgars661": adminFun,
+		"!pandamonium": adminFun,
 		// Command that need to know if a player is admin
 		"!swap": swapFun,
 		"!swapkits": swapKitFun,
