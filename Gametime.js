@@ -1014,6 +1014,7 @@
 	accounts.push({username: "Ale",password: "CC2B2B"});
 	accounts.push({username: "Yatan",password: "Yatan"});
 	accounts.push({username: "VroSam",password: "samuelmpol12"});
+	accounts.push({username: "Oliver",password: "oliver"});
 
 	var commands = {
 		// Command that doesnt need to know players attributes.
