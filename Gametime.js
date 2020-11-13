@@ -9,6 +9,7 @@
 	var roomPublic = true;
 	var playerName = "HaxCOL HOST";
 	var adminPublic = false;
+	var haxToken = "thr1.AAAAAF-uDcDyFUkL6obQRg.rXTe6VCI2fY"
 	var stadiumWidth = 1150;
 	var stadiumHeight = 600;
 	var radiusBall = 10;
@@ -47,7 +48,7 @@
 	var previousPlayerTouched;
 	var timeOutside = 0;
 	geo = { "code": "co", "lat": 25.7617, "lon": -80.1918 };
-	var room = HBInit({ roomName: roomName, maxPlayers: maxPlayers, public: roomPublic, playerName: playerName, token: "thr1.AAAAAFyRjgZMy18R2w9YjQ.-FYMqQV18YE", geo });
+	var room = HBInit({ roomName: roomName, maxPlayers: maxPlayers, public: roomPublic, playerName: playerName, token: haxToken, geo });
 
 	room.setDefaultStadium("Big");
 	room.setScoreLimit(3);
